@@ -1,0 +1,448 @@
+/* --- Reset y estilo base --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffe7d1, #f9c8a7); /* Fondo con degradado pastel */
+  color: #4e342e; /* Marrón oscuro */
+  line-height: 1.6;
+}
+
+/* --- Navegación --- */
+
+nav {
+  background-color: #8B0000; /* Rojo vino italiano */
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #a52a2a;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  background-color: #ff9800;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* --- Sección de contacto --- */
+#contacto {
+  padding: 40px 20px;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #a0522d;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+#contacto p {
+  font-size: 20px;
+  color: #555;
+  background-color: #fefefe;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+/* --- Info contacto en grid responsivo --- */
+.contacto-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* --- Cada info-item --- */
+.info-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #4e342e;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #a0522d;
+  font-weight: bold;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+/* --- Formularios --- */
+.formulario {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.formulario h4 {
+  color: #a0522d;
+  margin-bottom: 15px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4e342e;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  background-color: #a0522d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --- Sucursales (tarjetas) --- */
+.sucursales {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.sucursal {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sucursal h3 {
+  color: #a84328;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.sucursal .info p {
+  margin: 6px 0;
+  line-height: 1.6;
+  color: #4e342e;
+}
+
+/* --- Mapas centrados dentro del cuadro --- */
+.map-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
+/* --- Texto general centrado y estilizado --- */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Playfair Display', serif;
+  color: #8B4513;
+  margin-bottom: 30px;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .contacto-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sucursales {
+    padding: 0 15px;
+  }
+}
+
+/* --- Info contacto en grid responsivo --- */
+.contacto-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px; /* Separación entre cuadritos en la grilla */
+}
+
+/* --- Cada info-item --- */
+.info-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #4e342e;
+  margin-bottom: 20px; /* Separación vertical extra entre cuadritos */
+  box-sizing: border-box;
+}
+
+/* --- Sucursales (tarjetas) --- */
+.sucursales {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Más espacio entre sucursales */
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.sucursal {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Separación entre elementos dentro de cada sucursal */
+}
+
+/* Footer general */
+#footer {
+  background-color: #8B0000;
+  color: #f2f2f2;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor principal */
+#footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Columnas */
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Enlaces */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Imagen del sello */
+.footer-badge {
+  max-width: 130px;
+  margin-top: 10px;
+}
+
+/* Parte inferior */
+#footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Redes sociales */
+#footer-social {
+  margin-bottom: 10px;
+}
+
+#footer-social a img {
+  width: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+#footer-horarios {
+  color: #ffffff; /* Letras blancas */
+}
+
+#footer-horarios strong {
+  font-weight: bold;
+}
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+#footer-horarios h3,
+#footer-horarios p,
+#footer-horarios strong,
+#footer-sello,
+#footer-bottom,
+#footer-bottom p,
+#footer-bottom strong,
+#footer-social p {
+  color: #ffffff;
+}
+footer {
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#footer-restaurantes h3,
+#footer-restaurantes p,
+#footer-restaurantes strong,
+#footer-horarios h3,
+#footer-horarios p,
+#footer-horarios strong,
+#footer-sello,
+#footer-bottom,
+#footer-bottom p,
+#footer-bottom strong,
+#footer-social p {
+  color: #ffffff;
+}
+
+#footer {
+  color: #ffffff;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+  .whatsapp-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: sans-serif;
+    z-index: 1000;
+  }
+
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .whatsapp-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-options {
+    display: none;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .whatsapp-options a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .whatsapp-options a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Mostrar opciones al hacer hover */
+  .whatsapp-menu:hover .whatsapp-options {
+    display: block;
+  }
+
+  /* Ocultar en móviles si quieres */
+  @media (max-width: 768px) {
+    .whatsapp-menu {
+      display: none;
+    }
+  }

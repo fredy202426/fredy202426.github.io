@@ -1,0 +1,429 @@
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0; /* Fondo cálido y cremoso */
+  color: #333;
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav {
+  background-color: #8B0000; /* Rojo vino italiano */
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #a52a2a;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  background-color: #ff9800;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== SLIDER PRINCIPAL ===== */
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  animation: slide 25s infinite linear;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slides:hover .slide {
+  animation-play-state: paused;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.slide a {
+  display: block;
+  position: relative;
+}
+
+/* ===== TEXTO SOBRE LAS IMÁGENES ===== */
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  max-width: 80%;
+}
+
+/* ===== CONTROLADORES DEL SLIDER ===== */
+.slider-controler {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.slider-controler li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.slider-controler a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+/* ===== SLIDE DETENIDO AL HACER CLICK ===== */
+.slide:target {
+  animation-name: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+}
+
+/* ===== ANIMACIÓN DEL SLIDER ===== */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 1200px) {
+  .caption {
+    font-size: 48px;
+    bottom: 60px;
+    left: 40px;
+  }
+
+  .slide {
+    width: 1200px;
+  }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: #fef6ee; /* Fondo cálido opcional */
+}
+
+.slides {
+  display: flex;
+  animation: slide 25s infinite linear;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 550px; /* Más largo hacia abajo */
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  border-radius: 12px;
+  filter: brightness(0.9); /* Sutil oscurecimiento para que el texto resalte */
+}
+
+/* Texto encima de la imagen */
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+/* Controladores del slider */
+.slider-controler {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.slider-controler li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.slider-controler a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+.intro {
+  background-color: #fff6e5; /* Fondo crema suave */
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 5px solid #a52a2a; /* Rojo italiano */
+  border-bottom: 5px solid #a52a2a;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #8B0000; /* Rojo vino oscuro */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+  font-size: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.8;
+  padding: 0 10px;
+}
+@font-face {
+  font-family: 'Amazone BT';
+  src: url('fonts/AmazoneBT.ttf') format('truetype');
+}
+
+.intro p {
+  font-family: 'Amazone BT', cursive, sans-serif;
+}
+
+  /*footer*/
+  .footer {
+  background-color: #8B0000; /* Marrón similar al de la imagen */
+  color: #f2f2f2;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-badge {
+  max-width: 130px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.social {
+  margin-bottom: 10px;
+}
+
+.social a img {
+  width: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+  .whatsapp-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: sans-serif;
+    z-index: 1000;
+  }
+
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .whatsapp-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-options {
+    display: none;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .whatsapp-options a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .whatsapp-options a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Mostrar opciones al hacer hover */
+  .whatsapp-menu:hover .whatsapp-options {
+    display: block;
+  }
+
+  /* Ocultar en móviles si quieres */
+  @media (max-width: 768px) {
+    .whatsapp-menu {
+      display: none;
+    }
+  }
+  .video-container {
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+  cursor: pointer;
+  transition: max-width 0.5s ease, max-height 0.5s ease;
+  position: relative;
+}
+
+/* Video dentro del contenedor */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: border-radius 0.5s ease;
+}
+
+/* Estado expandido */
+.video-container.expanded {
+  max-width: 50vw;
+  max-height:50vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 9999;
+  background-color: #000;
+  cursor: zoom-out;
+}
+
+.video-container.expanded video {
+  height: 100vh;
+  border-radius: 0;
+}

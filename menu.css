@@ -1,0 +1,444 @@
+.intro {
+  background-color: #fff6e5; /* Fondo crema suave */
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 5px solid #a52a2a; /* Rojo italiano */
+  border-bottom: 5px solid #a52a2a;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #8B0000; /* Rojo vino oscuro */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+  font-size: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.8;
+  padding: 0 10px;
+}
+@font-face {
+  font-family: 'Amazone BT';
+  src: url('fonts/AmazoneBT.ttf') format('truetype');
+}
+
+.intro p {
+  font-family: 'Amazone BT', cursive, sans-serif;
+}
+
+/*------cuadro-------*/
+#mision-vision {
+  display: flex; /* Usamos flexbox para alinear los cuadros */
+  justify-content: space-between; /* Espacio entre los cuadros */
+  margin-bottom: 40px; /* Espacio inferior */
+}
+
+.container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+}
+
+.cuadro {
+  background-color: #f4f4f4; /* Color de fondo del cuadro */
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  flex: 1; /* Permite que los cuadros crezcan y se ajusten */
+  margin: 10px; /* Espacio entre los cuadros */
+}
+
+.cuadro h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333; /* Color del texto de los encabezados */
+  margin-bottom: 15px;
+}
+
+.cuadro p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555; /* Color del texto de los párrafos */
+}
+
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0; /* Fondo cálido y cremoso */
+  color: #333;
+}
+
+/* ===== NAVEGACIÓN ===== */
+  #main-nav {
+    background-color: #8B0000; /* Rojo vino italiano */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #main-nav li {
+    margin: 0 15px;
+  }
+
+  #main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a52a2a;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  #main-nav a:hover {
+    transform: scale(1.1);
+    background-color: #ff9800;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
+  .whatsapp-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: sans-serif;
+    z-index: 1000;
+  }
+
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .whatsapp-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-options {
+    display: none;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .whatsapp-options a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .whatsapp-options a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Mostrar opciones al hacer hover */
+  .whatsapp-menu:hover .whatsapp-options {
+    display: block;
+  }
+
+  /* Ocultar en móviles si quieres */
+  @media (max-width: 768px) {
+    .whatsapp-menu {
+      display: none;
+    }
+  }
+
+
+/*navegacion de mision-vision*/
+
+  #footer-nav {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    left: 15px;
+    background-color: transparent;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+  }
+
+  #footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+  }
+
+  #footer-nav li {
+    margin: 0;
+  }
+
+  #footer-nav a {
+    color: #555;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  #footer-nav a:hover {
+    background-color: #f2f2f2;
+    color: #8B0000; /* Rojo vino italiano */
+  }
+
+  /* Responsive: ocultar en pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    #footer-nav {
+      display: none;
+    }
+  }
+  
+
+  /*footer*/
+  .footer {
+  background-color: #8B0000; /* Marrón similar al de la imagen */
+  color: #f2f2f2;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-badge {
+  max-width: 130px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.social {
+  margin-bottom: 10px;
+}
+
+.social a img {
+  width: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+
+.whatsapp-menu {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-btn:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  background: #1ebe57;
+}
+
+.whatsapp-options {
+  margin-top: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  min-width: 220px;
+  text-align: right;
+}
+
+.whatsapp-menu.open .whatsapp-options {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.whatsapp-options a {
+  display: block;
+  padding: 14px 24px;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.2s, color 0.2s;
+}
+
+.whatsapp-options a:last-child {
+  border-bottom: none;
+}
+
+.whatsapp-options a:hover {
+  background: #25d366;
+  color: #fff;
+}
+
+/* Contenedor */
+#menu-pdf {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  font-family: 'Arial', sans-serif; /* Fuente base */
+}
+
+.menu-pdf-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilo para el título h2 */
+.menu-titulo {
+  font-family: 'Playfair Display', serif; /* Fuente elegante */
+  font-size: 2.8rem;
+  color: #25d366; /* Verde WhatsApp */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(37, 211, 102, 0.3);
+  font-weight: 700;
+}
+
+/* Estilo para el párrafo p */
+.menu-descripcion {
+  font-family: 'Amazone BT', serif; /* Si no tienes esta fuente, reemplaza por serif o sans-serif */
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.05);
+}
+
+/* Botón de descarga */
+.menu-boton-descarga {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+  gap: 10px;
+}
+
+.menu-boton-descarga svg {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
+}
+
+.menu-boton-descarga:hover {
+  background-color: #128c7e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(18, 140, 126, 0.5);
+}
+
+/* Estilo para iframe */
+iframe {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+
+
+

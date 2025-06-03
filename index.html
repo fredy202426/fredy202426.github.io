@@ -1,18 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miprimerapagina</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricotta Gourmet</title>
+  <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-    <a href="index.html">inicio</a>
-    <a href="productos.html">productos</a>
-<a href="contactenos.html">contactenos</a>
-<a href="https://gogle.com">gogle</a>
-<h1>la mejor comida del sector</h1>
-<img src="descarga.jpg" alt="png">
+
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- inicio -->
+  <section class="intro">
+    <h2>Ricotta Gourmet: el arte de combinar magia y pasta</h2>
+    <p>Inspirados en las tradiciones de Italia, en Ricotta Gourmet combinamos ingredientes frescos con técnicas auténticas para dar vida a cada plato. Nuestros chefs, apasionados por la cocina italiana, disfrutan reinventar sabores y crear nuevas recetas que sorprendan y enamoren en cada visita.</p>
+
+  </section>
+
+  <!-- Slider -->
+  <div class="wrapper">
+    <div class="slider" id="slider">
+      <ul class="slides">
+
+        <li class="slide" id="slide1">
+          <a href="#">
+            <h2 class="caption">Ricotta Gourmet - Cabecera del Llano</h2>
+            <img src="Sede principal cabecera del llano.jpg" alt="Sede principal Cabecera del Llano" />
+          </a>
+        </li>
+
+        <li class="slide" id="slide2">
+          <a href="#">
+            <h2 class="caption">Centro Comercial Acrópolis</h2>
+            <img src="Centro comercial acropolis.jpg" alt="Centro Comercial Acrópolis" />
+          </a>
+        </li>
+
+        <li class="slide" id="slide3">
+          <a href="#">
+            <h2 class="caption">Florida - Terraza 360°</h2>
+            <img src="Centro comercial florida plazoleta 360°.jpg" alt="Terraza 360 Florida" />
+          </a>
+        </li>
+
+        <li class="slide" id="slide4">
+          <a href="#">
+            <h2 class="caption">De La Cuesta - Piedecuesta</h2>
+            <img src="Centro comercial de la cuesta piedecuesta.jpg" alt="Centro Comercial De La Cuesta" />
+          </a>
+        </li>
+
+        <li class="slide" id="slide5">
+          <a href="#">
+            <h2 class="caption">Centro Internacional de Especialistas</h2>
+            <img src="Centro internacional de especialistas.  CIE.jpg" alt="Centro Internacional de Especialistas" />
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="slider-controler">
+        <li><a href="#slide1">&bullet;</a></li>
+        <li><a href="#slide2">&bullet;</a></li>
+        <li><a href="#slide3">&bullet;</a></li>
+        <li><a href="#slide4">&bullet;</a></li>
+        <li><a href="#slide5">&bullet;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="video-container" id="videoContainer">
+  <video id="videoPlayer" controls poster="imagen del video.jpg" preload="metadata">
+    <source src="Video de ricotta.mp4" type="video/mp4" />
+    <source src="tu-video.webm" type="video/webm" />
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+</div>
+
+
+  <section id="mision-vision">
+<div class="whatsapp-menu">
+  <button class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+  </button>
+  <div class="whatsapp-options">
+    <a href="https://wa.me/573144858360" target="_blank">Escribir al 314 485 8360</a>
+    <a href="https://wa.me/573112152915" target="_blank">Escribir al 311 215 2915</a>
+  </div>
+</div>
+
+
+
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Restaurantes</h3>
+      <p><strong>Bucaramanga:</strong> Cra. 35a # 48 – 125,<br>
+         C.C Acrópolis Local R3, plazoleta de comidas.</p>
+      <p><strong>Floridablanca:</strong> C.C La Florida – Terraza 360</p>
+      <p><strong>Piedecuesta:</strong> C.C De La Cuesta, segundo piso, local 204.<br>
+         Centro internacional de especialistas (HIC)<br>
+         K7 vía Piedecuesta</p>
+    </div>
+
+    <div class="footer-column">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="menu.html">Menú</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Horarios de Atención</h3>
+      <p><strong>Lunes a Sábados:</strong> 11:00 am – 10:00 pm</p>
+      <p><strong>Domingos & Festivos:</strong> 11:00 am – 09:00 pm</p>
+    </div>
+
+    <div class="footer-column">
+      <img src="sello1.png" alt="Sello recomendado 2025" class="footer-badge">
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="social">
+      <p><strong>Síguenos.</strong></p>
+      <a href="https://www.facebook.com/RicottaGourmett?rdid=b6YJGKTpckzrQRpz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AjEa37LCo%2F#"><img src="facebook.png" alt="facebook"
+      <a href="https://www.instagram.com/ricotta.gourmet/?igsh=b2ZsNW9tYXUzMmM4#"><img src="instagram.jpeg" alt="Instagram"></a>
+    </div>
+    <p>Copyright © 2025 Ricotta Gourmet</p>
+  </div>
+</footer>
+
 </body>
 </html>
-
-
